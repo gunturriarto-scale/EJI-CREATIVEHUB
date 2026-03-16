@@ -1,0 +1,8 @@
+{
+  "name": "EJI // CREATIVEHUB",
+  "description": "AI-powered content generation suite for social media marketing, including image generation, research, and copy writing.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

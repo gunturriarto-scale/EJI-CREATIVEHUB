@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #14B8A6;
+  --color-brand-hover: #0D9488;
+  --color-bg-dark: #000000;
+  --color-bg-main: #000000;
+  --color-surface: #f8fafc;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg-main)] text-white font-sans antialiased;
+  }
+}
+
+.loader-icon {
+  @apply inline-block border-2 border-white/10 border-l-brand-primary rounded-full animate-spin;
+}
+
+.card {
+  @apply bg-white text-slate-900 rounded-xl border border-slate-200 shadow-sm transition-all hover:shadow-md;
+}
+
+.btn-primary {
+  @apply bg-brand-primary text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center transition-all hover:bg-brand-hover hover:-translate-y-0.5 active:translate-y-0 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:transform-none;
+}
+
+.option-btn {
+  @apply py-2 px-4 rounded-lg border border-slate-200 bg-slate-50 text-slate-700 transition-all hover:border-brand-primary;
+}
+
+.option-btn.selected {
+  @apply bg-brand-primary border-brand-primary text-white font-semibold;
+}
+
+.input-field {
+  @apply w-full p-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all;
+}
+
+/* Markdown Styles */
+.markdown-body {
+  @apply text-slate-800 leading-relaxed;
+}
+.markdown-body h3 {
+  @apply text-xl font-bold mt-6 mb-3 border-b-2 border-brand-primary pb-1;
+}
+.markdown-body p {
+  @apply mb-4;
+}
+.markdown-body ul {
+  @apply list-disc pl-5 mb-4 space-y-2;
+}
+.markdown-body strong {
+  @apply text-slate-900 font-bold;
+}
+
