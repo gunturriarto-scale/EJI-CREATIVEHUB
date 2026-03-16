@@ -11,8 +11,7 @@ export type ToolId =
   | 'carousel-feed'
   | 'voice-over'
   | 'narasi-cerita'
-  | 'edit-karakter'
-  | 'video-ai';
+  | 'edit-karakter';
 
 export interface ImageData {
   base64: string;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   TrendingUp, Image as ImageIcon, ShoppingBag, UserPlus, 
   UserCog, SmilePlus, FileText, Edit2, Type, LayoutGrid, 
-  Mic, BookOpen, Palette, Menu, X, Zap, Video 
+  Mic, BookOpen, Palette, Menu, X, Zap 
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ToolId } from './types';
@@ -19,8 +19,6 @@ import { AdCopyGenerator } from './components/AdCopyGenerator';
 import { BannerGenerator } from './components/BannerGenerator';
 import { PhotoEditor } from './components/PhotoEditor';
 import { CarouselGenerator } from './components/CarouselGenerator';
-import { VideoGenerator } from './components/VideoGenerator';
-import { UsageLimit } from './components/UsageLimit';
 
 const tools = [
   { id: 'riset-ide', name: 'Riset Ide Viral', icon: TrendingUp },
@@ -36,7 +34,6 @@ const tools = [
   { id: 'voice-over', name: 'Buat Voice Over', icon: Mic },
   { id: 'narasi-cerita', name: 'Narasi Cerita', icon: BookOpen },
   { id: 'edit-karakter', name: 'Edit Gambar Karakter', icon: Palette },
-  { id: 'video-ai', name: 'Generate Video AI', icon: Video },
 ];
 
 export default function App() {
@@ -58,7 +55,6 @@ export default function App() {
       case 'combine-text': return <BannerGenerator />;
       case 'edit-foto': return <PhotoEditor />;
       case 'carousel-feed': return <CarouselGenerator />;
-      case 'video-ai': return <VideoGenerator />;
       default: return (
         <div className="flex flex-col items-center justify-center h-[60vh] text-slate-500">
           <Zap className="w-16 h-16 mb-4 opacity-20" />
@@ -94,7 +90,6 @@ export default function App() {
             </button>
           ))}
         </nav>
-        <UsageLimit />
       </aside>
 
       {/* Mobile Header */}
@@ -136,9 +131,6 @@ export default function App() {
                 </button>
               ))}
             </nav>
-            <div className="mt-8">
-              <UsageLimit />
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
